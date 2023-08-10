@@ -12,23 +12,26 @@ sports = [
     ['bicyclist', '🚴‍']
 ];
 
-firstSpotrs = sports.slice()
+
+firstSpotrs = JSON.parse(JSON.stringify(sports))
+console.log(firstSpotrs)
 firstSpotrs = sports.slice(5, 7);
 console.log(firstSpotrs)
 
-secondSummerSpors = sports.slice()
+secondSummerSpors = JSON.parse(JSON.stringify(sports))
+console.log(secondSummerSpors)
 secondSummerSpors = sports.slice(9, 12)
 console.log(secondSummerSpors)
 
 summerSports = firstSpotrs.concat(secondSummerSpors)
 console.log(summerSports)
 
-firstWinterSport = sports.slice()
+firstWinterSport = JSON.parse(JSON.stringify(sports))
 console.log(firstWinterSport)
 firstWinterSport = sports.slice(0, 2)
 console.log(firstWinterSport)
 
-secondWinterSport = sports.slice()
+secondWinterSport = JSON.parse(JSON.stringify(sports))
 console.log(secondWinterSport)
 secondWinterSport = sports.slice(3, 5)
 console.log(secondWinterSport)
@@ -36,7 +39,7 @@ console.log(secondWinterSport)
 winterSports = firstWinterSport.concat(secondWinterSport)
 console.log(winterSports)
 
-firstFructGroup = sports.slice()
+firstFructGroup = JSON.parse(JSON.stringify(sports))
 console.log(firstFructGroup)
 
 firstFructGroup = sports.slice(2, 3)
@@ -48,16 +51,14 @@ console.log(secondFructGroup)
 fruits = firstFructGroup.concat(secondFructGroup)
 console.log(fruits)
 
-listFruits = fruits.join(`</li> <li>`);
+listFruits = fruits.join(`</li><li>`);
 listWinterSports = winterSports.join(`</li><li>`)
 listSummerSports = summerSports.join(`</li> <li>`)
 
 
 
 
-document.write(`
-
-<ul>
+document.write(`<ul>
 <p>Winter Sports</p>
 <li>${listWinterSports}</li>
 <p> Summer Sports </p>
